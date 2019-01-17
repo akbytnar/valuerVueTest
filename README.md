@@ -1,2 +1,3 @@
 # valuerVueTest
-Demo: https://akbytnar.github.io/valuerVueTest/
+$ yarn install
+$ yarn serve
