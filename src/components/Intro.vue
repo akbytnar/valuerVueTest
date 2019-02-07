@@ -1,6 +1,22 @@
 <template>
   <div class="intro">
-    <h1>Hello, this is an Intro page</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali...</p>
+    <h1>{{intro.name}}</h1>
+    <p>{{intro.desc}}</p>
   </div>
 </template>
+<script >
+  export default{
+    props:{
+      intro :{
+        type: Object,
+        default: () => ({
+            name: 'no startup',
+            desc: 'no desc'
+        })
+      }
+    },
+    data(){
+      return{}
+    }
+  }
+</script>

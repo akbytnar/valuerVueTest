@@ -12,14 +12,33 @@
       <router-link to="/intro">Intro</router-link>
     </nav>
     <transition name="content" enter-active-class="animated bounceInUp" >
-      <router-view class="section" />
+      <router-view class="section" v-bind:experts="experts" v-bind:intro="intro"/>
     </transition>
 
   </div>
 </template>
 
 <script>
-
+export default{
+  data(){
+    return{
+      experts: [
+        {id: '0', name: 'Tom', speciality: 'writing', age: '24'},
+        {id: '1',name: 'Alex', speciality: 'reading', age: '30'},
+        {id: '2',name: 'Justyna', speciality: 'skiing', age: '26'},
+        {id: '3',name: 'Marek', speciality: 'reading', age: '34'},
+        {id: '4',name: 'Maria', speciality: 'writing', age: '64'},
+        {id: '5',name: 'Luis', speciality: 'runing', age: '14'},
+        {id: '6',name: 'Anna', speciality: 'skiing', age: '21'},
+        {id: '7',name: 'Pierre', speciality: 'writing', age: '25'}
+      ],
+      intro: {
+        name: 'valuer',
+        desc: 'the best startup :)'
+      }
+    }
+  }
+}
 </script>
 
 <style>
