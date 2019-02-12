@@ -1,14 +1,20 @@
 <template>
   <div >
     <div class="search-wrapper">
-     <input type="text" v-model="search" placeholder="Search title.."/>
-         <label>Search title:</label>
+
+     <input type="text" v-model="search" placeholder="Search for Experts"/>
+     <img src="https://via.placeholder.com/20"/>
+     <button class="blue-button" type="button" name="button">Search</button>
    </div>
-   {{search}}
+   <h3>CANDIDATES</h3>
+
    <div class="wrapper">
      <div class="card" v-for="expert in filteredList" :key="expert.id">
-        <small>posted by: {{ expert.name }}</small>
-         {{ expert.compoany }}
+       <img src="https://via.placeholder.com/35"/>
+        <h4>{{ expert.name }}</h4>
+        <p><small>{{expert.compoany}}</small></p>
+         <p><strong>{{ expert.comments }} comments</strong> </p>
+         <button type="button" class="blue-button" name="button">ASSIGN</button>
      </div>
   </div>
 
@@ -16,9 +22,6 @@
 
 
 </template>
-
-<style lang="css" scoped>
-</style>
 
 <script >
 export default{

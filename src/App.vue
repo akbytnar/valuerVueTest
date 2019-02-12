@@ -21,6 +21,7 @@
 <script>
 // import './style/global.scss'
 import './style/modal.scss'
+import './style/search.scss'
 
 export default{
   data(){

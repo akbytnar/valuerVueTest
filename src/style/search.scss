@@ -1,0 +1,30 @@
+@import "global.scss";
+.search-wrapper{
+  position: relative;
+    width: 100%;
+    border: 1px solid $light-blue;
+    border-radius: 1px;
+      padding: 9px 28px;
+  input{
+    position: absolute;
+    left: 20px;
+    outline: none;
+    border:none;
+    background-color: white;
+    padding:0;
+    font-size: 7px;
+    &::placeholder { color: $dark-grey-blue;}
+  }
+  button{
+    float:right;
+  }
+}
+.card{
+  border: 1px solid $light-blue;
+  height: 105px;
+  width:105px;
+}
+.wrapper{
+  display: flex;
+    flex-wrap: wrap;
+}
