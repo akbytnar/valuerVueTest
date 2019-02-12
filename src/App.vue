@@ -19,6 +19,9 @@
 </template>
 
 <script>
+// import './style/global.scss'
+import './style/modal.scss'
+
 export default{
   data(){
     return{

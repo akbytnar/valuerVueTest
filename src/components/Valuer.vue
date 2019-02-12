@@ -1,6 +1,37 @@
 <template>
   <div class="intro">
-    <h1>Hello, this is an Valuer page</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali...</p>
+    <button id="show-modal" class="test" @click="showModal = true">Show Modal</button>
+    <!-- use the modal component, pass in the prop -->
+    <modal v-if="showModal" @close="showModal = false">
+      <!--
+        you can use custom content here to overwrite
+        default content
+      -->
+      <!-- <h3 slot="header">custom header</h3> -->
+      <div slot="body">
+        <Search></Search>
+        <p>jkfska</p>
+      </div>
+    </modal>
+
+
   </div>
 </template>
+<script >
+
+
+import Modal from './Modal.vue';
+import Search from './Search.vue';
+export default {
+  name: "Valuer",
+  components: {
+    Modal, Search
+  },
+    data(){
+      return{
+        showModal: false
+      }
+    }
+
+};
+</script>
