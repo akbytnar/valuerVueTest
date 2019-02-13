@@ -16,8 +16,6 @@
           <h3>Add new</h3>
           <Search></Search>
         </div>
-
-        <p>jkfska</p>
       </div>
     </modal>
 

@@ -1,22 +1,30 @@
 <template>
-  <div >
+  <div class="search" >
     <div class="search-wrapper">
-
+      <img src="https://via.placeholder.com/7"/>
      <input type="text" v-model="search" placeholder="Search for Experts"/>
-     <img src="https://via.placeholder.com/20"/>
      <button class="blue-button" type="button" name="button">Search</button>
    </div>
+
+   <div class="filter">
+    <div class="onOff">
+      <span>No Startups Assigned</span>
+      <input data-index="0" id="cheap" type="checkbox" />
+      <label for="cheap"></label>
+    </div>
+</div>
    <h3>CANDIDATES</h3>
 
    <div class="wrapper">
      <div class="card" v-for="expert in filteredList" :key="expert.id">
        <img src="https://via.placeholder.com/35"/>
-        <h4>{{ expert.name }}</h4>
+        <p class="name"><strong>{{ expert.name }}</strong></p>
         <p><small>{{expert.compoany}}</small></p>
          <p><strong>{{ expert.comments }} comments</strong> </p>
          <button type="button" class="blue-button" name="button">ASSIGN</button>
      </div>
   </div>
+
 
  </div>
 
