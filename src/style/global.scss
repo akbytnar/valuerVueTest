@@ -25,31 +25,26 @@ $dark-grey-blue: #354053;
 $light-blue: #e0e9fd;
 $light-grey: #A9BAC6;
 $grey: #f3f3f3;
-
+.button{
+  font-size: 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  font-family: Gotham-Bold;
+}
 .blue-button {
   background: $dark-grey-blue;
   color: white;
-  font-size: 10px;
-  border-radius: 2px;
-
-  text-transform: uppercase;
-  padding: 6px 14px;
 }
 .grey-button{
+  width: 70px;
   background: $grey;
   color: $dark-grey-blue;
-  font-size: 10px;
-  border-radius: 2px;
-  border: none;
-  outline: none;
-  text-transform: uppercase;
-  padding: 6px 14px;
 }
 
 .onOff {
   position: relative;
   clear: both;
-  margin: 0 0 50px;
   float: left;
 
   input {
@@ -70,6 +65,7 @@ $grey: #f3f3f3;
   }
 
   label {
+    margin-left: 20px;
     width: 20px;
     height: 12px;
     box-sizing: border-box;
@@ -86,7 +82,7 @@ $grey: #f3f3f3;
   }
 
   input[type=checkbox]:checked + label:before {
-    left: 10px;
+    left: 9px;
   }
 
   label:before {
@@ -97,13 +93,15 @@ $grey: #f3f3f3;
     box-shadow: 0 0.5px 1.5px 0 rgba(0, 0, 0, 0.17);
     position: absolute;
     background: white;
-    left: 0;
-    top: 0;
+    left: 1px;
+    top: 1px;
     box-sizing: border-box;
     border-radius: 100px;
   }
 }
 .tooltip {
+  padding: 12px 0 !important;
+  width: calc(100% - 30px);
   font-size: 12px;
   cursor: pointer;
   border-radius: 2px;
@@ -114,20 +112,20 @@ $grey: #f3f3f3;
   background: $dark-grey-blue;
   color: white;
   position: absolute;
-  top:40%;
-  padding: 12px 26px;
+  top:63px;
   transform: translateY(9px);
   transition: all 0.3s ease-in-out;
+
 }
 .tooltip::after {
   content: " ";
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 12px 12.5px 0 12.5px;
+  border-width: 8px 6px 0 6px;
   border-color: $dark-grey-blue transparent transparent transparent;
   position: absolute;
-  left: 40%;
-  top:-35%;
+  left: calc(50% - 6px);
+  top:-8px;
   transform: rotate(180deg);
 }

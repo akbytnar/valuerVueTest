@@ -1,19 +1,19 @@
 <template>
 <div>
-  <div class="assigned-box" >
+  <div class="assigned-box">
     <h3>Assigned Experts</h3>
     <div class="wrapper">
-      <div  v-for="expert in experts" :key="expert.id" v-if="expert.assigned" class="card--assigned">
+      <div v-for="expert in experts" :key="expert.id" v-if="expert.assigned" class="card--assigned">
         <img src="https://via.placeholder.com/48" />
-        <p class="name"><strong>{{ expert.name }}</strong></p>
-        <div class="tooltip" v-on:click="remove(expert)" >
+        <p class="name">{{ expert.name }}</p>
+        <div class="tooltip" v-on:click="remove(expert)">
           Remove
         </div>
 
       </div>
     </div>
   </div>
-  <div  class="search">
+  <div class="search">
     <h3>Add new</h3>
     <div class="search-wrapper">
       <img src="https://via.placeholder.com/7" />
@@ -26,16 +26,18 @@
         <label for="cheap"></label>
       </div>
     </div>
-    <h3>CANDIDATES</h3>
+    <h3 v-if="search.length>0">CANDIDATES</h3>
 
-    <div class="wrapper">
+    <div class="wrapper candidates" v-if="search.length>0">
       <div class="card" v-for="expert in filteredList" :key="expert.id">
         <img src="https://via.placeholder.com/70" />
-        <p class="name"><strong>{{ expert.name }}</strong></p>
-        <p><small>{{expert.company}}</small></p>
-        <p><strong>{{ expert.comments }} comments</strong> </p>
-        <button v-if="!expert.assigned" type="button" class="blue-button" v-on:click="assign(expert)" name="button">ASSIGN</button>
-          <button v-if="expert.assigned" type="button" disabled class="grey-button" name="button">ok</button>
+        <p class="name">{{ expert.name }}</p>
+        <p class="workspace">{{expert.company}}</p>
+        <p class="comments">{{ expert.comments }} comments</p>
+        <button v-if="!expert.assigned" type="button" class="blue-button button" v-on:click="assign(expert)" name="button">ASSIGN</button>
+        <button v-if="expert.assigned" type="button" disabled class="grey-button button" name="button">
+          <img src="https://via.placeholder.com/14" />
+        </button>
       </div>
     </div>
 
@@ -54,7 +56,7 @@ export default {
       search: '',
       experts: [{
         id: 1,
-        name: 'Craig Gonzales',
+        name: 'Crairaigfgf Gonzalesonzales',
         company: 'valuer.ai',
         comments: 22,
         startupAssigned: false,
@@ -178,10 +180,10 @@ export default {
     }
   },
   methods: {
-    assign: function (expert){
+    assign: function(expert) {
       expert.assigned = true;
     },
-    remove: function (expert){
+    remove: function(expert) {
       expert.assigned = false;
     }
   }

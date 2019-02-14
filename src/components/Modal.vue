@@ -5,8 +5,8 @@
           <div class="modal-container">
             <div class="modal-header">
               <slot name="header">
-                <button class="modal-default-button" @click="$emit('close')">
-                  <img src="https://via.placeholder.com/48" alt=""/>
+                <button class="modal-default-button button--close" @click="$emit('close')">
+                  <img src="https://via.placeholder.com/20" alt=""/>
                 </button>
               </slot>
             </div>
