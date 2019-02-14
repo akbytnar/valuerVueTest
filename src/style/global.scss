@@ -1,73 +1,76 @@
-body{
-   font-family: Gotham;
+body {
+  font-family: Gotham;
 }
-
 $dark-grey-blue: #354053;
 $light-blue: #e0e9fd;
 $light-grey: #A9BAC6;
 
-.blue-button{
+.blue-button {
   background: $dark-grey-blue;
   color: white;
   font-weight: bold;
-  font-size: 7px;
+  font-size: 10px;
   border-radius: 1px;
   border: none;
   outline: none;
   text-transform: uppercase;
-  padding: 3px 7px;
+  padding: 6px 14px;
 }
-.onOff{
 
-  position:relative;
-  clear:both;
-  margin:0 0 25px;
+.onOff {
+  position: relative;
+  clear: both;
+  margin: 0 0 50px;
   float: left;
-  input{
-    display:none;
+
+  input {
+    display: none;
   }
 
+  span {
+    font-size: 10px;
+    float: left;
+  }
 
+  .wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 60px 60px 10px;
+  }
 
-span{
-  font-size:7px;
-  float:left;
-}
-.wrap{
+  label {
+    width: 20px;
+    height: 12px;
+    box-sizing: border-box;
+    background: $light-grey;
+    float: left;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
 
-  position: absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  padding:30px 30px 5px;
-}
-label{
-  width:10px;
-  height:6px;
-  box-sizing:border-box;
-  background: $light-grey;
-  float:left;
-  border-radius:100px;
-  position:relative;
-  cursor:pointer;
-  transition:.3s ease;
-}
-input[type=checkbox]:checked + label{
-  background: $dark-grey-blue;
-}
-input[type=checkbox]:checked + label:before{
-  left:5px;
-}
-label:before{
-  transition:.3s ease;
-  content:'';
-  width:5px;
-  height:5px;
-  position:absolute;
-  background:white;
-  left:0;
-  top:0;
-  box-sizing:border-box;
-  border-radius:100px;
-}
+  input[type=checkbox]:checked + label {
+    background: $dark-grey-blue;
+  }
+
+  input[type=checkbox]:checked + label:before {
+    left: 10px;
+  }
+
+  label:before {
+    transition: 0.3s ease;
+    content: '';
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0.5px 1.5px 0 rgba(0, 0, 0, 0.17);
+    position: absolute;
+    background: white;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border-radius: 100px;
+  }
 }

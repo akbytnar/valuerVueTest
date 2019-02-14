@@ -1,61 +1,60 @@
 @import './global';
+$modal-width: 844px;
+$modal-padding-horrizontal: 154px;
+$modal-padding-vertical: 40px;
 
-$modal-width: 422px;
-$modal-padding-horrizontal: 77px;
-$modal-padding-vertical: 20px;
-
-.assigned-box{
+.assigned-box {
   border-bottom: 1px dashed $light-blue;
 }
+
 .modal-mask {
-position: fixed;
-z-index: 9998;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, .5);
-display: table;
-transition: opacity .3s ease;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: table;
+  transition: opacity 0.3s ease;
 }
 
 .modal-wrapper {
-display: table-cell;
-vertical-align: middle;
+  display: table-cell; //vertical-align: middle;
 }
 
 .modal-container {
   margin: auto;
-color: $dark-grey-blue;
-width: $modal-width ;
-padding:$modal-padding-vertical $modal-padding-horrizontal;
-background-color: white;
-box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-transition: all .3s ease;
+  color: $dark-grey-blue;
+  width: $modal-width;
+  padding: $modal-padding-vertical $modal-padding-horrizontal;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all 0.3s ease;
 }
 
 .modal-body {
-  h3{
+  h3 {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 20px;
     text-transform: uppercase;
   }
 }
 
 .modal-default-button {
-float: right;
+  float: right;
 }
 
 .modal-enter {
-opacity: 0;
+  opacity: 0;
 }
 
 .modal-leave-active {
-opacity: 0;
+  opacity: 0;
 }
 
 .modal-enter .modal-container,
 .modal-leave-active .modal-container {
--webkit-transform: scale(1.1);
-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
