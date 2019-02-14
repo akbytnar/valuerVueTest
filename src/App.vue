@@ -46,12 +46,10 @@ export default{
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Gotham:400,700');
 @import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 body {
   background-color: #EEEEEE;
-  font-family: 'Gotham', sans-serif;
   display: grid;
   grid-template-rows: auto;
   justify-items: center;

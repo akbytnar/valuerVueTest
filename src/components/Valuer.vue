@@ -9,11 +9,9 @@
       -->
     <!-- <h3 slot="header">custom header</h3> -->
     <div slot="body">
-      <div class="assigned-box">
-        <h3>Assigned Experts</h3>
-      </div>
+      
       <div>
-        <h3>Add new</h3>
+
         <Search></Search>
       </div>
     </div>
