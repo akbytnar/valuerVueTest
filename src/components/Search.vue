@@ -35,7 +35,7 @@
         <p><small>{{expert.company}}</small></p>
         <p><strong>{{ expert.comments }} comments</strong> </p>
         <button v-if="!expert.assigned" type="button" class="blue-button" v-on:click="assign(expert)" name="button">ASSIGN</button>
-          <button v-if="expert.assigned" type="button" class="grey-button" name="button">ok</button>
+          <button v-if="expert.assigned" type="button" disabled class="grey-button" name="button">ok</button>
       </div>
     </div>
 
@@ -57,41 +57,48 @@ export default {
         name: 'Craig Gonzales',
         company: 'valuer.ai',
         comments: 22,
+        startupAssigned: false,
         assigned: true
       }, {
         id: 2,
         name: 'Craig Gonzales',
         company: 'valuer.ai',
         comments: 50,
+        startupAssigned: false,
         assigned: false
       }, {
         id: 3,
         name: 'Craig Gonzales',
         company: 'valuer.ai',
         comments: 100,
+        startupAssigned: false,
         assigned: false
       }, {
         id: 4,
         name: 'Tim Gonzales',
         company: 'valuer.ai',
         comments: 12,
+        startupAssigned: false,
         assigned: false
       }, {
         id: 5,
         name: 'Rozalia Gonzales',
         company: 'valuer.ai',
         comments: 234,
+        startupAssigned: false,
         assigned: true
       }, {
         id: 6,
         name: 'Maria Gonzales',
         company: 'valuer.ai',
         comments: 674,
+        startupAssigned: false,
         assigned: true
       }, {
         id: 7,
         name: 'Szymon Gonzales',
         company: '',
+        startupAssigned: true,
         comments: 78,
         assigned: false
       }, {
@@ -105,45 +112,53 @@ export default {
         name: 'Craig Bogusz',
         company: 'valuer.ai',
         comments: 65,
+        startupAssigned: true,
         assigned: false
       }, {
         id: 10,
         name: 'Sandra Kwiatkowska',
         company: 'valuer.ai',
         comments: 30,
+        startupAssigned: true,
         assigned: false
       }, {
         id: 11,
+        startupAssigned: false,
         name: 'Max Nowy',
         company: 'nike',
         comments: 220,
         assigned: false
       }, {
         id: 12,
+        startupAssigned: false,
         name: 'Tania Milosh',
         company: 'apple',
         comments: 14,
         assigned: false
       }, {
         id: 13,
+        startupAssigned: false,
         name: 'Mariusz Kwiatkowski',
         company: 'google',
         comments: 10,
         assigned: false
       }, {
         id: 14,
+        startupAssigned: false,
         name: 'Craig Nowak',
         company: 'BMW',
         comments: 2,
         assigned: false
       }, {
         id: 15,
+        startupAssigned: false,
         name: 'Craig Kozak',
         company: '',
         comments: 23,
         assigned: false
       }, {
         id: 16,
+        startupAssigned: false,
         name: 'Tom Gonzales',
         company: null,
         comments: 10,
@@ -155,7 +170,7 @@ export default {
     filteredList() {
       return this.experts.filter(expert => {
         if (this.startupsAssigned) {
-          return (expert.name.toLowerCase().includes(this.search.toLowerCase()) && (expert.company === '' || expert.company === null));
+          return (expert.name.toLowerCase().includes(this.search.toLowerCase()) && expert.startupAssigned === true);
         }
         return (expert.name.toLowerCase().includes(this.search.toLowerCase()));
 

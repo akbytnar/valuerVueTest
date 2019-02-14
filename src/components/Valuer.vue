@@ -1,17 +1,9 @@
 <template>
 <div class="intro">
   <button id="show-modal" class="test" @click="showModal = true">Show Modal</button>
-  <!-- use the modal component, pass in the prop -->
   <modal v-if="showModal" @close="showModal = false">
-    <!--
-        you can use custom content here to overwrite
-        default content
-      -->
-    <!-- <h3 slot="header">custom header</h3> -->
     <div slot="body">
-      
       <div>
-
         <Search></Search>
       </div>
     </div>

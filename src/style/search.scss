@@ -9,9 +9,8 @@
   justify-content: center;
   display: flex;
   border: 1px solid $light-blue;
-  border-radius: 1px;
+  border-radius: 2px;
   height: 40px;
-
   input {
     margin-left: 10px;
     width: 690px;
@@ -20,7 +19,6 @@
     background-color: white;
     padding: 0;
     font-size: 10px;
-
     &::placeholder {
       color: $dark-grey-blue;
     }
@@ -71,7 +69,7 @@
 }
 
 .card {
-  border-radius: 1px;
+  border-radius: 2px;
   border: 1px solid $light-blue;
   border-top: 0;
   padding: 20px;
@@ -90,10 +88,11 @@
   }
 
   img {
-    border-radius: 1px;
+    border-radius: 2px;
   }
 }
 .card--assigned{
+  cursor: pointer;
   position: relative;
   border: none;
   img{
@@ -109,41 +108,13 @@
 .filter {
   width: 100%;
   height: 44px;
-
   .onOff {
     border: 1px $light-blue solid;
     border-top: 0;
-    border-radius: 1px;
+    border-radius: 2px;
     padding: 16px 20px;
   }
 }
-
 .onOff {
   border: solid 1px $light-blue;
-}
-.tooltip {
-  visibility: hidden;
-  z-index: 1;
-  opacity: .40;
-  width: 100%;
-  padding: 0px 20px;
-  background: #333;
-  color: #E086D3;
-  position: absolute;
-  top:40%;
-  transform: translateY(9px);
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 3px rgba(56, 54, 54, 0.86);
-}
-.tooltip::after {
-  content: " ";
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 12px 12.5px 0 12.5px;
-  border-color: $dark-grey-blue transparent transparent transparent;
-  position: absolute;
-  left: 40%;
-  top:-35%;
-  transform: rotate(180deg);
 }

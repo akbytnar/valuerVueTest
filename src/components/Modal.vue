@@ -6,7 +6,7 @@
             <div class="modal-header">
               <slot name="header">
                 <button class="modal-default-button" @click="$emit('close')">
-                  X
+                  <img src="https://via.placeholder.com/48" alt=""/>
                 </button>
               </slot>
             </div>
