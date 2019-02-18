@@ -10,10 +10,17 @@
    font-family: "Gotham-Bold";
    src: url(../assets/fonts/Gotham/Gotham-Bold.otf) format("opentype");
 }
+@font-face {
+   font-family: "Gotham-BookItalic";
+   src: url(../assets/fonts/Gotham/Gotham-BookItalic.otf) format("opentype");
+}
 body {
   font-family: Gotham-Medium !important;
 }
-
+input, textarea{
+  font-family: Gotham-Medium !important;
+  outline: none;
+}
 button{
   border: none;
   outline: none;
@@ -22,11 +29,14 @@ button{
     cursor: default;
   }
 }
+
 $dark-grey-blue: #354053;
 $light-blue: #e0e9fd;
 $light-grey: #A9BAC6;
 $grey: #f3f3f3;
 $light-blue-border: #f0f5ff;
+$italic-text-grey: #a1a4ae;
+$tabs-grey: #95989d;
 .border_bottom_light{
   border-bottom: 1px solid $light-blue-border;
 }
@@ -46,7 +56,9 @@ $light-blue-border: #f0f5ff;
   background: $grey;
   color: $dark-grey-blue;
 }
-
+.white-button{
+  color: $dark-grey-blue;
+}
 .onOff {
   position: relative;
   clear: both;

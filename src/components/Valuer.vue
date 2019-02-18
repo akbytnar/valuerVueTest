@@ -1,6 +1,6 @@
 <template>
 <div class="intro">
-  <button id="show-modal" class="test" @click="showModal = true">Show Modal</button>
+  <button id="show-modal" class="test button blue-button" @click="showModal = true">Show Modal experts</button>
   <modal v-if="showModal" @close="showModal = false">
     <div slot="body">
       <div>
@@ -8,8 +8,8 @@
       </div>
     </div>
   </modal>
-  <button id="show-modal-feedback" class="test" @click="showModalFeedback = true">Show Modal</button>
-  <modal v-if="showModalFeedback" @close="showModalFeedback = false" class="modal-feedback">
+  <button id="show-modal-feedback" class="test button " @click="showModalFeedback = true">Show Modal Feedback</button>
+  <modal v-if="showModalFeedback" @close="showModalFeedback = false" id="feedback">
     <div slot="body">
       <div>
         <Feedback></Feedback>
