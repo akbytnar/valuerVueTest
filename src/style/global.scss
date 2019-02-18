@@ -13,6 +13,7 @@
 body {
   font-family: Gotham-Medium !important;
 }
+
 button{
   border: none;
   outline: none;
@@ -25,6 +26,10 @@ $dark-grey-blue: #354053;
 $light-blue: #e0e9fd;
 $light-grey: #A9BAC6;
 $grey: #f3f3f3;
+$light-blue-border: #f0f5ff;
+.border_bottom_light{
+  border-bottom: 1px solid $light-blue-border;
+}
 .button{
   font-size: 10px;
   border-radius: 2px;

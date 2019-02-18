@@ -22,6 +22,7 @@
 // import './style/global.scss'
 import './style/modal.scss'
 import './style/search.scss'
+import './style/feedback.scss'
 
 export default{
   data(){

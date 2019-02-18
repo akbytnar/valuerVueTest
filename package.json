@@ -11,7 +11,8 @@
     "moment": "^2.23.0",
     "vee-validate": "^2.0.3",
     "vue": "^2.5.13",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-tabs-with-active-line": "^1.1.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-alpha.12",

@@ -9,7 +9,7 @@
     </div>
   </modal>
   <button id="show-modal-feedback" class="test" @click="showModalFeedback = true">Show Modal</button>
-  <modal v-if="showModalFeedback" @close="showModalFeedback = false">
+  <modal v-if="showModalFeedback" @close="showModalFeedback = false" class="modal-feedback">
     <div slot="body">
       <div>
         <Feedback></Feedback>
