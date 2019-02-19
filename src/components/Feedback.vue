@@ -1,5 +1,5 @@
 <template>
-<div >
+<div>
   <div class="border_bottom_light feedback-title">
     <input type="text" placeholder="Add title here">
   </div>
@@ -11,35 +11,42 @@
   </div>
   <div class=" person-info">
 
-      <img src="https://via.placeholder.com/48" alt="">
+    <img src="https://via.placeholder.com/48" alt="">
 
     <div class="description">
-        <h1>Mathilde Jocobsen</h1>
-        <p>VP at Spotify</p>
+      <h1>Mathilde Jocobsen</h1>
+      <p>VP at Spotify</p>
     </div>
 
   </div>
   <Tabs>
     <Tab label="Idea/Suggestion" :active="true">
       <div>
-        <textarea name="name" >Write comment here</textarea>
+        <textarea name="name">Write comment here</textarea>
       </div>
     </Tab>
     <Tab label="Question">
       <div>
-        <textarea name="name" >Write question</textarea>
+        <textarea name="name">Write question</textarea>
       </div>
     </Tab>
     <Tab label="Appreciate">
       <div>
-        <textarea name="name" >Write appreciate</textarea>
+        <textarea name="name">Write appreciate</textarea>
       </div>
     </Tab>
   </Tabs>
   <div class="files border_bottom_light">
     <div class="attach-file">
-      <img src="https://via.placeholder.com/16" alt="">
-      <p>Attach a file</p>
+      <div v-if="attachedFile !== ''" class="horizontal-center">
+        <img src="https://via.placeholder.com/14" alt="" @click="removeFile">
+        <label>{{attachedFile.name}}</label>
+      </div>
+      <div v-else class="horizontal-center">
+        <label for="feedback-file" class="horizontal-center">
+          <img src="https://via.placeholder.com/16" alt="">Attach a file</label>
+        <input @change="onFileChange" type="file" id="feedback-file" />
+      </div>
     </div>
     <div class="middle-line">
 
@@ -68,11 +75,17 @@ export default {
   },
   data() {
     return {
-
+      attachedFile: ''
     }
   },
   methods: {
-
+    onFileChange(e) {
+      console.log(e);
+      this.attachedFile = e.target.files[0];
+    },
+    removeFile() {
+      this.attachedFile = '';
+    }
   }
 }
 </script>

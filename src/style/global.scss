@@ -59,6 +59,10 @@ $tabs-grey: #95989d;
 .white-button{
   color: $dark-grey-blue;
 }
+.horizontal-center{
+  display: flex;
+  align-items: center;
+}
 .onOff {
   position: relative;
   clear: both;
